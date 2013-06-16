@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/frameworks/bootstrap.min.css">
 		<link href="css/frameworks/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
         <link rel="stylesheet" href="css/frameworks/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/edits.css">
 		
 		<!-- Sitewide common CSS stylesheet -->
 		<link rel="stylesheet" href="css/common.css">
@@ -34,15 +35,61 @@
 		
     </head>
     <body>
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
         <div class="container">
 
-			<div class="">
-				<h1>HOME</h1>
-			</div>
+			
+  <div class="span12" id="homeimage">
+    Insert image</div>
+
+<div class="row">
+    <div class="span3">
+      <div class="sectiontile" id="tile-section" style="background: url('http://www.kahikai.org/images/explore/science.png')">
+        <div class="title-overlay">
+          <div class="title">Science</div>
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+      <div class="sectiontile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Economics</div>
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+      <div class="sectiontile" style="background: url('http://image.spreadshirt.com/image-server/image/composition/1502795/view/1/producttypecolor/1/type/png/width/280/height/280/i-love-history_design.png')">
+        <div class="title-overlay">
+          <div class="title">Social Science</div>
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Arts and Humanities</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+$(document).ready(function() {
+
+  $('.result').hover(function() {
+    $(this).find('div').slideUp(100);
+  },
+  function() {
+    $(this).find('div').slideDown(50);
+  });
+ });
+
+</script>
 			
             <footer>
                 <p>&copy; Company 2012</p>
