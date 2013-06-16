@@ -1,41 +1,29 @@
-﻿<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<!DOCTYPE html>
+<html lang="en">
 
-        <link rel="stylesheet" href="css/frameworks/bootstrap.min.css">
-		<link href="css/frameworks/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/frameworks/bootstrap-responsive.min.css">
-		
-		<!-- Sitewide common CSS stylesheet -->
-		<link rel="stylesheet" href="css/common.css">
+<!-- Mirrored from themelize.me/demos/appstrap1.2/index.htm by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 16 Jun 2013 11:12:50 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Flow</title>
 
-		
-		<!-- CSS specific to this page -->
-		<link rel="stylesheet" href="css/editDiagram.css">
-		
-		
-		
-		
-		<!-- Moving the utils stylesheet to the bottom -->
-		<link rel="stylesheet" href="css/utils.css">
-		
-		<style>
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
-	</head>
+<!-- Bootstrap CSS -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
 
-    <script type="text/javascript" src="embedapi.js"></script>
+<!-- Flexslider -->
+<link href="css/flexslider.css" rel="stylesheet">
+
+<!-- Theme style -->
+<link href="css/theme-style.css" rel="stylesheet">
+
+<!--Your custom colour override-->
+<link href="#" id="colour-scheme" rel="stylesheet">
+
+<!-- Your custom override -->
+<link href="css/custom-style.css" rel="stylesheet">
+
+<script type="text/javascript" src="embedapi.js"></script>
 	
 	<script type="text/javascript">
 	
@@ -74,7 +62,7 @@
 			
 			//var svgexample = '<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">  <g>   <title>Layer 1</title>   <text transform="matrix(11.8182 0 0 1 -1033.14 0)" stroke="#000000" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_1" y="89" x="101" stroke-width="0" fill="#000000"/>   <rect stroke="#000000" id="svg_2" height="61" width="194" y="68" x="38" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#56aaff"/>   <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_3" y="109" x="134" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">Register Vehicle</text>   <rect id="svg_4" stroke="#000000" height="61" width="194" y="158.5" x="122" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#56aaff"/>   <text id="svg_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="197.5" x="217" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">Pay Fees</text>   <line id="svg_8" y2="164" x2="191" y1="121" x1="148" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke="#000000" fill="none"/>  </g> </svg>';
 			
-			var svgexample = '<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">  <g>   <title>Layer 1</title>   <text fill="#000000" stroke-width="0" x="101" y="89" id="svg_1" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" stroke="#000000" transform="matrix(11.8182 0 0 1 -1033.14 0)"/>   <rect fill="#56aaff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="38" y="68" width="194" height="61" id="svg_2" stroke="#000000"/>   <text fill="#000000" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="134" y="109" id="svg_3" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve">Register Vehicle</text>   <rect fill="#56aaff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="61" y="184.5" width="194" height="61" stroke="#000000" id="svg_4"/>   <text fill="#000000" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="156" y="223.5" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" id="svg_5">Pay Fees</text>   <rect stroke="#000000" id="svg_6" fill="#56aaff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="346" y="164.5" width="227.99999" height="61"/>   <text id="svg_7" fill="#000000" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="459" y="202.5" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve">Get weight Certificate</text>   <rect id="svg_10" height="49" width="202" y="278" x="361" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#56aaff"/>   <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_11" y="308" x="453" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">Done</text>   <line id="svg_12" y2="184" x2="169" y1="127" x1="151" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="none"/>   <line id="svg_13" y2="192" x2="351" y1="208" x1="251" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="none"/>   <line id="svg_14" y2="279" x2="466" y1="227" x1="463" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="none"/>  </g> </svg> ';
+			var svgexample = '<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">  <g>   <title>Layer 1</title>   <text fill="#000000" stroke-width="0" x="101" y="89" id="svg_1" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" stroke="#000000" transform="matrix(11.8182 0 0 1 -1033.14 0)"/>   <rect fill="#56aaff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="38" y="68" width="194" height="61" id="svg_2" stroke="#000000"/>   <text fill="#000000" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="134" y="109" id="svg_3" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve">Register Vehicle</text>   <rect fill="#56aaff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="61" y="184.5" width="194" height="61" stroke="#000000" id="svg_4"/>   <text fill="#000000" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="156" y="223.5" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" id="svg_5">Pay Fees</text>   <rect stroke="#000000" id="svg_6" fill="#56aaff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="346" y="164.5" width="227.99999" height="61"/>   <text id="svg_7" fill="#000000" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="459" y="202.5" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve">Get weight Certificate</text>   <rect id="svg_10" height="49" width="202" y="278" x="361" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#56aaff"/>   <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_11" y="308" x="453" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">Done</text>   <line id="svg_12" y2="184" x2="169" y1="127" x1="151" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="none"/>   <line id="svg_13" y2="192" x2="351" y1="208" x1="251" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="none"/>   <line id="svg_14" y2="279" x2="466" y1="227" x1="463" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="none"/>  </g> </svg>';
 			
             svgCanvas.setSvgString(svgexample);
         }
@@ -85,55 +73,209 @@
 	</script>
     
 	
-	<body>
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+
+<!-- Le fav and touch icons - @todo: fill with your icons or remove -->
+<link rel="shortcut icon" href="img/icons/favicon.html">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/114x114.html">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/72x72.html">
+<link rel="apple-touch-icon-precomposed" href="img/icons/default.html">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Rambla|Calligraffitti' rel='stylesheet' type='text/css'>
+
+
+
+<body class="page page-index">
+
+<div id="navigation" class="wrapper">
+  <div class="navbar  navbar-static-top"> 
+    
+    <!--Hidden Header Region-->
+    <div class="header-hidden hidden">
+      <div class="header-hidden-inner container">
+        <div class="row-fluid">
+          <div class="span4">
+            <h3>About Us</h3>
+            <p>Image based wikipedia</p>
+            <a href="about.htm" class="btn btn-mini btn-primary">Find out more</a> </div>
+          <div class="span4"> 
+            <!--@todo: replace with company contact details-->
+            <h3>Contact Us</h3>
+            <address>
+            <p><abbr title="Phone"><i class="icon-phone"></i></abbr> 4082078836</p>
+            <p><abbr title="Email"><i class="icon-envelope"></i></abbr> info@flow.me</p>
+            <p><abbr title="Address"><i class="icon-home"></i></abbr> Flow HQ @ PaypalHQ</p>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+     <!--Header & Branding region-->
+    <div class="header site-header">
+      <div class="header-inner container">
+        <div class="row-fluid">
+          <div class="span4"> 
+            <!--branding/logo--> 
+            <a class="brand" href="index.htm" title="Home">
+            <h1><span>Flow</span>.io<span>.</span></h1>
+            </a>
+            <div class="slogan">Crowd Sourced Image Wiki</div>
+          </div>
+		  
+		  <div class="span6">
+			  <form class="search-form navbar-form pull-right">
+					<input type="text" class="span2" style="width:400px;">
+					<button type="submit" class="btn">Search</button>
+			</form>
+		  </div>
+		  
+		  <div class="span2">
+			  <ul class="nav user-menu pull-right">
+          <li><a href="signup.htm" class="btn btn-primary signup">Sign Up</a></li>
+          <li class="dropdown"> <a href="login.htm" class="btn btn-primary dropdown-toggle login" id="login-drop" data-toggle="dropdown">Login</a>
+            <div class="dropdown-menu" role="menu" aria-labelledby="login-drop">
+              <form action="http://themelize.me/demos/appstrap1.2/login.htm" class="form-inline" id="login-form-drop" role="menuitem">
+                <div class="input-append">
+                  <input type="text" class="input-small email" placeholder="Email">
+                  <input type="password" class="input-small password" placeholder="Password">
+                  <input type="button" class="btn btn-primary login" value="Login">
+                </div>
+              </form>
+              <span class="divider" role="menuitem"></span> <small role="menuitem">Not a member? <a href="#" class="signup">Sign up now!</a></small> <small role="menuitem"><a href="#">Forgotten password?</a></small> </div>
+          </li>
+        </ul>
+		  </div>
+		  
+          
+          <!--header rightside-->
+          
+        </div>
+      </div>
+    </div>
+	
+	
+	<div class="container">
+      <div class="navbar-inner hidden">
+        
+        <!--mobile collapse menu button--> 
+        <a class="btn btn-navbar pull-left" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+        
+        <!--user menu-->
+		<!--
+        <ul class="nav user-menu pull-right">
+          <li><a href="signup.htm" class="btn btn-primary signup">Sign Up</a></li>
+          <li class="dropdown"> <a href="login.htm" class="btn btn-primary dropdown-toggle login" id="login-drop" data-toggle="dropdown">Login</a>
+            <div class="dropdown-menu" role="menu" aria-labelledby="login-drop">
+              <form action="http://themelize.me/demos/appstrap1.2/login.htm" class="form-inline" id="login-form-drop" role="menuitem">
+                <div class="input-append">
+                  <input type="text" class="input-small email" placeholder="Email">
+                  <input type="password" class="input-small password" placeholder="Password">
+                  <input type="button" class="btn btn-primary login" value="Login">
+                </div>
+              </form>
+              <span class="divider" role="menuitem"></span> <small role="menuitem">Not a member? <a href="#" class="signup">Sign up now!</a></small> <small role="menuitem"><a href="#">Forgotten password?</a></small> </div>
+          </li>
+        </ul>
+        -->
+		
+        <!--everything within this div is collapsed on mobile-->
+        <div class="nav-collapse collapse"> 
+          
+          <!--main navigation-->
+       
+        </div>
+        <!--/.nav-collapse --> 
+      </div>
+    </div>
+  </div>
+</div>
+
+ <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/frameworks/bootstrap.min.css">
+    <link href="css/frameworks/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/frameworks/bootstrap-responsive.min.css">
+    
+    <!-- Sitewide common CSS stylesheet -->
+    <link rel="stylesheet" href="css/common.css">
+
+    
+    <!-- CSS specific to this page -->
+    <link rel="stylesheet" href="css/editDiagram.css">
+    
+    
+    
+    
+    <!-- Moving the utils stylesheet to the bottom -->
+    <link rel="stylesheet" href="css/utils.css">
+    
+    <style>
+            /* body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            } */
+			
+			.site-header{
+				border-bottom:1px solid green;
+			}
+        </style>
+  </head>
+
+  <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
         <div class="container">
 
-			<div class="context-info clearfix">
-				<div class="source-link simple-nav"><a href="viewDiagram_newVariant.html">Main Diagram</a>&nbsp ></div>
-				<div class="simple-nav fork-title" contentEditable="true">&nbsp;New Untitled Diagram</div>
-			</div>
-			
-			
-			<div class="editing-container cleafix">
-				
-				<iframe src="svg-editor.html" width="100%" height="500px" id="svgedit" onload="init_embed()"></iframe>
-				
-
-				
-			</div>
-			
-			
-			
-			<div class="notes-container clearfix">
-				<div class="block-title">Notes</div>
-					<div class="notes">
-						<div contentEditable="true" class="note-item">
-							Add some notes about your changes here.
-						</div>
-					</div>
-			</div>
-			
-			
-			
-			<div class="actions-container">
-				<div class="row-fluid">
-				
-					<div class="span8">
-						
-					</div>
-					
-					<div class="span4 actions">
-						<div class="btn btn-success pull-right save-changes">Save Changes</div>
-						<div class="btn btn-inverse pull-right cancel-changes">Cancel</div>
-					</div>
-				</div>
-			</div>
-			
-			
+      <div class="context-info clearfix">
+        <div class="source-link simple-nav"><a href="viewDiagram_newVariant.html">Main Diagram</a>&nbsp ></div>
+        <div class="simple-nav fork-title" contentEditable="true">&nbsp;New Untitled Diagram</div>
+      </div>
+      
+      
+      <div class="editing-container cleafix">
+        
+        <iframe src="svg-editor.html" width="100%" height="500px" id="svgedit" onload="init_embed()"></iframe>
+        
+      </div>
+      
+      
+      
+      <div class="notes-container clearfix">
+        <div class="block-title">Notes</div>
+          <div class="notes">
+            <div contentEditable="true" class="note-item">
+              Add some notes about your changes here.
+            </div>
+          </div>
+      </div>
+      
+      
+      
+      <div class="actions-container">
+        <div class="row-fluid">
+        
+          <div class="span8">
+            
+          </div>
+          
+          <div class="span4 actions">
+            <div class="btn btn-success pull-right save-changes">Save Changes</div>
+            <div class="btn btn-inverse pull-right cancel-changes">Cancel</div>
+          </div>
+        </div>
+      </div>
+      
+      
             <footer>
                 <p>&copy; Company 2012</p>
             </footer>
@@ -142,26 +284,106 @@
 
     </body>
 
-	
-	<script src="js/frameworks/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-	<!-- Unminified Scripts for Dev version -->
-	
-	<script src="js/frameworks/jquery-1.9.1.min.js"></script>
-	<script src="js/frameworks/require.js"></script>
-	<script src="js/frameworks/vendor/bootstrap.js"></script>
-	<script src="js/frameworks/jquery-ui-1.10.0.custom.js"></script>
-	<script src="js/frameworks/json2.js"></script>
-	<script src="js/frameworks/underscore.js"></script>
-	<script src="js/frameworks/backbone.js"></script>
-	<!-- ---------------------------------- -->
-	
-	<!-- Script specific to this page -->
-	<script src="js/editDiagram.js"></script>
-	
-	<script type="text/javascript">
+  
+  <script src="js/frameworks/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <!-- Unminified Scripts for Dev version -->
+  
+  <script src="js/frameworks/jquery-1.9.1.min.js"></script>
+  <script src="js/frameworks/require.js"></script>
+  <script src="js/frameworks/vendor/bootstrap.js"></script>
+  <script src="js/frameworks/jquery-ui-1.10.0.custom.js"></script>
+  <script src="js/frameworks/json2.js"></script>
+  <script src="js/frameworks/underscore.js"></script>
+  <script src="js/frameworks/backbone.js"></script>
+  <!-- ---------------------------------- -->
+  
+  <!-- Script specific to this page -->
+  <!--<script src="js/editDiagram.js"></script>-->
+  
+  <!--
+    <button onclick="loadSvg();">Load example</button>
+    <button onclick="saveSvg();">Save data</button>
+  -->
+  
+
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="span3 col">
+        <div class="block contact-block"> 
+          <!--@todo: replace with company contact details-->
+          <h3>Contact Us</h3>
+          <address>
+          <p><abbr title="Phone"><i class="icon-phone"></i></abbr> 408324234</p>
+          <p><abbr title="Email"><i class="icon-envelope"></i></abbr> info@flow.io</p>
+          <p><abbr title="Address"><i class="icon-home"></i></abbr> Flow HQ @ AngelHack @ Paypal HQ</p>
+          </address>
+        </div>
+      </div>
+      <div class="span5 col">
+        <div class="block">
+          <h3>About Us</h3>
+          <p>Crowd Sourced Image Wiki</p>
+        </div>
+      </div>
+      <div class="span4 col">
+        <div class="block newsletter">
+          <h3>Newsletter</h3>
+          <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+          <!--@todo: replace with mailchimp code-->
+          <form class="form-inline">
+            <div class="input-append">
+              <input class="input-medium" type="text" placeholder="Email" />
+              <button class="btn btn-primary" type="button">Go!</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div id="toplink"><a href="#top" class="top-link" title="Back to top">Back To Top <i class="icon-chevron-up"></i></a></div>
+      <!--@todo: replace with company copyright details-->
+      <div class="subfooter">
+        <div class="span6">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--Scripts --> 
+<script src="js/jquery.js"></script> 
+
+<!-- @todo: remove unused Javascript for better performance --> 
+<script src="js/bootstrap-transition.js"></script> 
+<script src="js/bootstrap-alert.js"></script> 
+<script src="js/bootstrap-affix.js"></script> 
+<script src="js/bootstrap-modal.js"></script> 
+<script src="js/bootstrap-dropdown.js"></script> 
+<script src="js/bootstrap-scrollspy.js"></script> 
+<script src="js/bootstrap-tab.js"></script> 
+<script src="js/bootstrap-tooltip.js"></script> 
+<script src="js/bootstrap-popover.js"></script> 
+<script src="js/bootstrap-button.js"></script> 
+<script src="js/bootstrap-collapse.js"></script> 
+<script src="js/bootstrap-carousel.js"></script> 
+<script src="js/bootstrap-typeahead.js"></script> 
+
+<!--Non-Bootstrap JS--> 
+<script src="js/jquery.quicksand.js"></script> 
+<script src="js/jquery.flexslider-min.js"></script> 
+
+</body>
+
+<script type="text/javascript">
 		
 		
 		var t=setTimeout(function(){
+		
+			//alert('asd');
 			
 			loadSvg();
 			
@@ -169,12 +391,6 @@
 		
 			
 	</script>
-	
-	<!--
-		<button onclick="loadSvg();">Load example</button>
-		<button onclick="saveSvg();">Save data</button>
-	-->
-	
 
-       
+<!-- Mirrored from themelize.me/demos/appstrap1.2/index.htm by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 16 Jun 2013 11:13:11 GMT -->
 </html>
