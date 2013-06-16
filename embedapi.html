@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -33,9 +33,51 @@
                 padding-bottom: 40px;
             }
         </style>
+	</head>
+
+    <script type="text/javascript" src="embedapi.js"></script>
+    <script type="text/javascript">
+        var svgCanvas = null;
+
+        function init_embed() {
+            var frame = document.getElementById('svgedit');
+			svgCanvas = new embedded_svg_edit(frame);
+			
+			// Hide main button, as we will be controlling new/load/save etc from the host document
+			var doc;
+			doc = frame.contentDocument;
+			if (!doc)
+			{
+				doc = frame.contentWindow.document;
+			}
+			
+			var mainButton = doc.getElementById('main_button');
+			mainButton.style.display = 'none';            
+        }
+        
+        function handleSvgData(data, error) {
+			if (error)
+			{
+				alert('error ' + error);
+			}
+            else
+			{
+				alert('Congratulations. Your SVG string is back in the host page, do with it what you will\n\n' + data);
+			}			
+        }
+        
+        function loadSvg() {
+            var svgexample = '<svg width="640" height="480" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><title>Layer 1</title><rect stroke-width="5" stroke="#000000" fill="#FF0000" id="svg_1" height="35" width="51" y="35" x="32"/><ellipse ry="15" rx="24" stroke-width="5" stroke="#000000" fill="#0000ff" id="svg_2" cy="60" cx="66"/></g></svg>';
+            svgCanvas.setSvgString(svgexample);
+        }
 		
-    </head>
-    <body>
+		function saveSvg() {			
+			svgCanvas.getSvgString()(handleSvgData);
+		}
+    </script>
+
+	
+	<body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -43,14 +85,14 @@
         <div class="container">
 
 			<div class="context-info clearfix">
-				<div class="source-link simple-nav"><a href="#">Main Diagram</a>&nbsp ></div>
+				<div class="source-link simple-nav"><a href="viewDiagram.html">Main Diagram</a>&nbsp ></div>
 				<div class="simple-nav fork-title" contentEditable="true">&nbsp;New Untitled Diagram</div>
 			</div>
 			
 			
 			<div class="editing-container cleafix">
 				
-				<iframe src="svg-editor.html" width="100%" height="500px" id="svgedit" ></iframe>
+				<iframe src="svg-editor.html" width="100%" height="500px" id="svgedit" onload="init_embed()"></iframe>
 				
 			</div>
 			
@@ -60,7 +102,7 @@
 				<div class="block-title">Notes</div>
 					<div class="notes">
 						<div contentEditable="true" class="note-item">
-							Add some notes for your changes.
+							Add some notes about your changes here.
 						</div>
 					</div>
 				
@@ -90,86 +132,7 @@
         </div> <!-- /container -->
 
     </body>
-	
-	<style type="text/css">
-	
-	
-		.simple-nav{
-		
-			float:left;
-			margin:5px;
-			
-		}
-		
-		.fork-title{
-			background-color:#dadada;
-			border-radius:5px;
-			padding:0px 5px;
-		}
-		
-		.source-link a{
-			color:rgb(12, 110, 187);
-			text-decoration:underline;
-			
-		}
-	
-		.editing-container{
-			width:100%;
-			<height:auto></height:auto>;
-			border:1px solid #dadada;
-			border-radius:5px;
-		}
-		
-		.notes-container{
-			width:100%;
-			margin-top:10px;
-			padding:10px 0px;
-			border-top:1px solid #dadada;
-			border-bottom:1px solid #dadada;
-		}
-		.actions-container{
-			width:100%;
-			margin-top:10px;
-		}
-		
-		.actions .btn{
-			margin:0px 10px;
-		}
-		
-		.note-item{
-			border:1px solid #dadada;
-			background-color:#dadada;
-			border-radius:5px;
-			padding:5px;
-		}
-		
-		.block-title{
-			font-weight:bold;
-			font-size:20px;
-			margin:5px;
-		}
-		
-	</style>
-	
-	<script type="text/javascript">
-	
-	$(function(){
-		
-		var diagramData = {};
-		
-		$('.save-changes').on('click',function(event){
-		
-			var $this = $(this);
-			var $target = $(event.target);
-			
-			//Serialize the object
-			$.post("'/diagrams/create", diagramData );
-			
-		});
-		
-	});
-	
-	</script>
+
 	
 	<script src="js/frameworks/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	<!-- Unminified Scripts for Dev version -->
@@ -186,17 +149,11 @@
 	<!-- Script specific to this page -->
 	<script src="js/editDiagram.js"></script>
 	
-	<!-- Minified Scripts for Production version  -->
-	
 	<!--
-	<script src="js/frameworks/vendor/require.js"></script>
-	<script src="js/frameworks/vendor/bootstrap.min.js"></script>
-	<script src="js/frameworks/jquery-ui-1.10.0.custom.min.js"></script>
-	<script src="js/frameworks/json2.js"></script>
-	<script src="js/frameworks/underscore.min.js"></script>
-	<script src="js/frameworks/backbone.min.js"></script>
+		<button onclick="loadSvg();">Load example</button>
+		<button onclick="saveSvg();">Save data</button>
 	-->
 	
-	
-	
+
+       
 </html>

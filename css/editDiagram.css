@@ -1,0 +1,54 @@
+.simple-nav{
+	
+		float:left;
+		margin:5px;
+		
+	}
+	
+	.fork-title{
+		background-color:#dadada;
+		border-radius:5px;
+		padding:0px 5px;
+	}
+	
+	.source-link a{
+		color:rgb(12, 110, 187);
+		text-decoration:underline;
+		
+	}
+
+	.editing-container{
+		width:100%;
+		height:auto;
+		/* border:1px solid #dadada; */
+		border-radius:5px;
+	}
+	
+	.notes-container{
+		width:100%;
+		margin-top:10px;
+		padding:10px 0px;
+		border-top:1px solid #dadada;
+		border-bottom:1px solid #dadada;
+	}
+	.actions-container{
+		width:100%;
+		margin-top:10px;
+	}
+	
+	.actions .btn{
+		margin:0px 10px;
+	}
+	
+	.note-item{
+		border:1px solid #dadada;
+		background-color:rgb(240, 240, 240);
+		border-radius:5px;
+		padding:5px;
+	}
+	
+	.block-title{
+		font-weight:bold;
+		font-size:20px;
+		margin:5px;
+	}
