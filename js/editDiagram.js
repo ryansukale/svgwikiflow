@@ -33,6 +33,9 @@ $(function(){
 	}
 	
 	function handleSvgData(data, error) {
+	
+		console.log(data);
+		
 		if (error)
 		{
 			alert('error ' + error);
@@ -41,13 +44,30 @@ $(function(){
 		{
 			//Serialize the svg in a string and save it.
 			
+			
+			
 			var saveObj =  {
 				id:'007',
-				svgInfo : {
-					parentId : '000', 
+				parentId : '001',
+				svgInfo : { 
 					svgContent : data
 				}
 			} ;
+			
+			
+			$.post('http://www.google.com');
+			
+			var requestURL = "http://wikiflow-api.herokuapp.com/subdiagram/create/001/"+JSON.stringify(saveObj);
+			
+			console.log(encodeURI(requestURL));
+			
+			//--disable-web-security
+			
+			$.post(encodeURI(requestURL),function(data){
+				
+				console.log(data);
+				
+			});
 			
 			//alert('Congratulations. Your SVG string is back in the host page, do with it what you will\n\n' + data);
 			console.dir(saveObj);
