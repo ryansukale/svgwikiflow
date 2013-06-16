@@ -16,6 +16,7 @@
 		
 		<!-- CSS specific to this page -->
 		<link rel="stylesheet" href="css/viewDiagram.css">
+		<link rel="stylesheet" href="css/edits.css">
 		
 		
 		<!-- Moving the utils stylesheet to the bottom -->
@@ -65,7 +66,8 @@
 				<div class="main-content-block clearfix">
 				
 					<div class="current-image">
-						<img src="diagram_master.png" alt="" />
+						<!-- <img src="diagram_master.png" alt="" /> -->
+						<!-- <iframe src="svg-viewer.html" width="100%" height="500px" id="svgedit" onload="init_embed()"></iframe> -->
 					</div>
 					
 					
@@ -74,29 +76,131 @@
 					</div>
 					
 				</div>
+				<div class="image-actions">
+					<div class="btn-group pull-right">
+					  <a class="btn dropdown-toggle btn-info btn-contribute" data-toggle="dropdown" href="editDiagram.html">
+						Contribute
+						<span class="caret"></span>
+					  </a>
+					  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+						  <li><a tabindex="-1" href="editDiagram.html">Create Your own version</a></li>
+						  <li><a tabindex="-1" href="#">Download</a></li>
+						  <li><a tabindex="-1" href="#">View Older Versions</a></li>
+						  <li><a tabindex="-1" href="#">Show Collaborators</a></li>
+						  <li class="divider"></li>
+						  <li><a tabindex="-1" href="#">Share</a></li>
+						</ul>
+					</div>
+					
+					
+				</div>
+				
 				
 				<div class="diagram-metadata clearfix">
 					
 				</div>
 				
 				<div class="variants-block clearfix">
-				
-					<div class="row">
-					
-						<div class="span3 variant">
-							
-						</div>
-						
-						<div class="span3 variant">
-							
-						</div>
-						
-						<div class="span3 variant">
-							
-						</div>
-						
+					<div class="variants-title">
+						Contributions
 					</div>
 					
+				
+					<div class="row">
+    <div class="span2">
+      <div class="sectiontile" id="tile-section" style="background: url('http://www.kahikai.org/images/explore/science.png')">
+        <div class="title-overlay">
+          <div class="title">Science</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Economics</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" style="background: url('http://image.spreadshirt.com/image-server/image/composition/1502795/view/1/producttypecolor/1/type/png/width/280/height/280/i-love-history_design.png')">
+        <div class="title-overlay">
+          <div class="title">Social Science</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Arts and Humanities</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Arts and Humanities</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Arts and Humanities</div>
+        </div>
+      </div>
+    </div>
+  </div>
+					
+				
+				
+					<div class="row">
+    <div class="span2">
+      <div class="sectiontile" id="tile-section" style="background: url('http://www.kahikai.org/images/explore/science.png')">
+        <div class="title-overlay">
+          <div class="title">Science</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Economics</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" style="background: url('http://image.spreadshirt.com/image-server/image/composition/1502795/view/1/producttypecolor/1/type/png/width/280/height/280/i-love-history_design.png')">
+        <div class="title-overlay">
+          <div class="title">Social Science</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Arts and Humanities</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Arts and Humanities</div>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+        <div class="title-overlay">
+          <div class="title">Arts and Humanities</div>
+        </div>
+      </div>
+    </div>
+  </div>
+					
+				
+				
+				
 				</div>
 				
 				
