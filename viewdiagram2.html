@@ -65,13 +65,37 @@
     <div class="header">
       <div class="header-inner container">
         <div class="row-fluid">
-          <div class="span8"> 
+          <div class="span4"> 
             <!--branding/logo--> 
             <a class="brand" href="index.htm" title="Home">
             <h1><span>Flow</span>.io<span>.</span></h1>
             </a>
             <div class="slogan">Crowd Sourced Image Wiki</div>
           </div>
+		  
+		  <div class="span6"> 
+			<form class="search-form navbar-form pull-right">
+				  <input type="text" class="span2" style="width:400px;">
+				  <button type="submit" class="btn">Search</button>
+				</form>
+			</div>
+			
+		  <div class="span2"> 
+		  <ul class="nav user-menu pull-right">
+          <li><a href="signup.htm" class="btn btn-primary signup">Sign Up</a></li>
+          <li class="dropdown"> <a href="login.htm" class="btn btn-primary dropdown-toggle login" id="login-drop" data-toggle="dropdown">Login</a>
+            <div class="dropdown-menu" role="menu" aria-labelledby="login-drop">
+              <form action="http://themelize.me/demos/appstrap1.2/login.htm" class="form-inline" id="login-form-drop" role="menuitem">
+                <div class="input-append">
+                  <input type="text" class="input-small email" placeholder="Email">
+                  <input type="password" class="input-small password" placeholder="Password">
+                  <input type="button" class="btn btn-primary login" value="Login">
+                </div>
+              </form>
+              <span class="divider" role="menuitem"></span> <small role="menuitem">Not a member? <a href="#" class="signup">Sign up now!</a></small> <small role="menuitem"><a href="#">Forgotten password?</a></small> </div>
+          </li>
+        </ul>
+			</div>
           
           <!--header rightside-->
           
@@ -79,12 +103,13 @@
       </div>
     </div>
     <div class="container">
-      <div class="navbar-inner"> 
+      <div class="navbar-inner hidden"> 
         
         <!--mobile collapse menu button--> 
         <a class="btn btn-navbar pull-left" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
         
         <!--user menu-->
+		<!--
         <ul class="nav user-menu pull-right">
           <li><a href="signup.htm" class="btn btn-primary signup">Sign Up</a></li>
           <li class="dropdown"> <a href="login.htm" class="btn btn-primary dropdown-toggle login" id="login-drop" data-toggle="dropdown">Login</a>
@@ -99,6 +124,7 @@
               <span class="divider" role="menuitem"></span> <small role="menuitem">Not a member? <a href="#" class="signup">Sign up now!</a></small> <small role="menuitem"><a href="#">Forgotten password?</a></small> </div>
           </li>
         </ul>
+		-->
         
         <!--everything within this div is collapsed on mobile-->
         <div class="nav-collapse collapse"> 
@@ -141,187 +167,228 @@
     <body>
       
 
-        <div class="container">
+	    <div class="container">
 
-      <div class="">
+			<div class="">
 
-        <div class="header-block">
-          
-          <form class="search-form navbar-form pull-right">
-            <input type="text" class="span2">
-            <button type="submit" class="btn">Submit</button>
-          </form>
-        </div>
-      
-        <div class="question-block clearfix">
-        
-          <div class="question">
-            How to register a car in california?
-          </div>
-          
-          <div class="voting-block">
-            <span class="upvotes">
-              <span>23</span>
-              <span><img src="upvote.png" alt="" /></span>
-            </span>
-            
-            <span class="downvotes">
-              <span>5</span>
-              <span><img src="downvote.png" alt="" /></span>
-            </span>
-          </div>
-          
-        </div>
-        
-        <div class="main-content-block clearfix">
-        
-          <div class="current-image">
-            <!-- <img src="diagram_master.png" alt="" /> -->
-            <!-- <iframe src="svg-viewer.html" width="100%" height="500px" id="svgedit" onload="init_embed()"></iframe> -->
-          </div>
-          
-          
-          <div class="image-comments hidden">
-            Image Comments
-          </div>
-          
-        </div>
-        <div class="image-actions">
-          <div class="btn-group pull-right">
-            <a class="btn dropdown-toggle btn-info btn-contribute" data-toggle="dropdown" href="editDiagram.html">
-            Contribute
-            <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-              <li><a tabindex="-1" href="editDiagram.html">Create Your own version</a></li>
-              <li><a tabindex="-1" href="#">Download</a></li>
-              <li><a tabindex="-1" href="#">View Older Versions</a></li>
-              <li><a tabindex="-1" href="#">Show Collaborators</a></li>
-              <li class="divider"></li>
-              <li><a tabindex="-1" href="#">Share</a></li>
-            </ul>
-          </div>
-          
-          
-        </div>
-        
-        
-        <div class="diagram-metadata clearfix">
-          
-        </div>
-        
-        <div class="variants-block clearfix">
-          <div class="variants-title">
-            Contributions
-          </div>
-          
-        
-          <div class="row">
+				<div class="header-block hidden">
+					
+					<!--
+					<form class="search-form navbar-form pull-right">
+					  <input type="text" class="span2">
+					  <button type="submit" class="btn">Submit</button>
+					</form>
+					
+					-->
+					
+				</div>
+			
+				<div class="question-block clearfix">
+				
+					<div class="question">
+						How to register a car in california?
+					</div>
+					
+					<div class="voting-block">
+						<span class="upvotes">
+							<span>23</span>
+							<span><img src="img/upvote.jpg" alt="" /></span>
+						</span>
+						
+						<span class="downvotes">
+							<span>5</span>
+							<span><img src="img/downvote.jpg" alt="" /></span>
+						</span>
+					</div>
+					
+				</div>
+				
+				<div class="main-content-block clearfix">
+				
+					<div class="current-image">
+						<img src="img/diagram.png" alt="" />
+						<!-- <iframe src="svg-viewer.html" width="100%" height="500px" id="svgedit" onload="init_embed()"></iframe> -->
+					</div>
+					
+					
+					<div class="image-comments hidden">
+						Image Comments
+					</div>
+					
+				</div>
+				<div class="image-actions">
+					<div class="btn-group pull-right">
+					  <a class="btn dropdown-toggle btn-info btn-contribute" data-toggle="dropdown" href="editDiagram.html">
+						Contribute
+						<span class="caret"></span>
+					  </a>
+					  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+						  <li><a tabindex="-1" href="editDiagram.html">Create Your own version</a></li>
+						  <li><a tabindex="-1" href="#">Download</a></li>
+						  <li><a tabindex="-1" href="#">View Older Versions</a></li>
+						  <li><a tabindex="-1" href="#">Show Collaborators</a></li>
+						  <li class="divider"></li>
+						  <li><a tabindex="-1" href="#">Share</a></li>
+						</ul>
+					</div>
+					
+					
+				</div>
+				
+				
+				<div class="diagram-metadata clearfix">
+					
+				</div>
+				
+				<div class="variants-block clearfix">
+					<div class="variants-title">
+						Contributions
+					</div>
+					
+				
+					<div class="row">
     <div class="span2">
-      <div class="sectiontile" id="tile-section" style="background: url('http://www.kahikai.org/images/explore/science.png')">
+      <div class="sectiontile" id="tile-section" style="background: url('img/3.png')">
         <div class="title-overlay">
-          <div class="title">Science</div>
+          <div class="title">
+			<div>55 Comments</div>
+			<div>54 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+      <div class="sectiontile" style="background: url('img/4.png')">
         <div class="title-overlay">
-          <div class="title">Economics</div>
+          <div class="title">
+			<div>56 Comments</div>
+			<div>12 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" style="background: url('http://image.spreadshirt.com/image-server/image/composition/1502795/view/1/producttypecolor/1/type/png/width/280/height/280/i-love-history_design.png')">
+      <div class="sectiontile" style="background: url('img/1.png')">
         <div class="title-overlay">
-          <div class="title">Social Science</div>
+          <div class="title">
+			<div>56 Comments</div>
+			<div>47 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+      <div class="sectiontile" id="section-tile" style="background: url('img/2.png')">
         <div class="title-overlay">
-          <div class="title">Arts and Humanities</div>
+          <div class="title">
+			<div>45 Comments</div>
+			<div>12 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+      <div class="sectiontile" id="section-tile" style="background: url('img/1.png')">
         <div class="title-overlay">
-          <div class="title">Arts and Humanities</div>
+          <div class="title">
+			<div>42 Comments</div>
+			<div>15 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+      <div class="sectiontile" id="section-tile" style="background: url('img/4.png')">
         <div class="title-overlay">
-          <div class="title">Arts and Humanities</div>
+          <div class="title">
+			<div>66 Comments</div>
+			<div>35 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
   </div>
-          
-        
-        
-          <div class="row">
+					
+				
+				
+					<div class="row">
     <div class="span2">
-      <div class="sectiontile" id="tile-section" style="background: url('http://www.kahikai.org/images/explore/science.png')">
+      <div class="sectiontile" id="tile-section" style="background: url('img/1.png')">
         <div class="title-overlay">
-          <div class="title">Science</div>
+          <div class="title">
+			<div>23 Comments</div>
+			<div>15 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+      <div class="sectiontile" style="background: url('img/2.png')">
         <div class="title-overlay">
-          <div class="title">Economics</div>
+          <div class="title">
+			<div>23 Comments</div>
+			<div>15 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" style="background: url('http://image.spreadshirt.com/image-server/image/composition/1502795/view/1/producttypecolor/1/type/png/width/280/height/280/i-love-history_design.png')">
+      <div class="sectiontile" style="background: url('img/3.png')">
         <div class="title-overlay">
-          <div class="title">Social Science</div>
+          <div class="title">
+			<div>23 Comments</div>
+			<div>15 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+      <div class="sectiontile" id="section-tile" style="background: url('img/4.png')">
         <div class="title-overlay">
-          <div class="title">Arts and Humanities</div>
+          <div class="title">
+			<div>23 Comments</div>
+			<div>15 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+      <div class="sectiontile" id="section-tile" style="background: url('img/2.png')">
         <div class="title-overlay">
-          <div class="title">Arts and Humanities</div>
+          <div class="title">
+			<div>23 Comments</div>
+			<div>15 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
     <div class="span2">
-      <div class="sectiontile" id="section-tile" style="background: url('http://www.ncconstructionnews.com/wp-content/uploads/2012/12/Economy.jpg')">
+      <div class="sectiontile" id="section-tile" style="background: url('img/1.png')">
         <div class="title-overlay">
-          <div class="title">Arts and Humanities</div>
+          <div class="title">
+			<div>23 Comments</div>
+			<div>15 Upvotes</div>
+		  </div>
         </div>
       </div>
     </div>
   </div>
-          
-        
-        
-        
-        </div>
-        
-        
-      </div>
-      
+					
+				
+				
+				
+				</div>
+				
+				
+			</div>
+			
             <footer>
                 <p>&copy; Company 2012</p>
             </footer>
 
         </div> <!-- /container -->
 
+     
     </body>
   
   
