@@ -36,8 +36,10 @@
 	</head>
 
     <script type="text/javascript" src="embedapi.js"></script>
-    <script type="text/javascript">
-        var svgCanvas = null;
+	
+	<script type="text/javascript">
+	
+		var svgCanvas = null;
 
         function init_embed() {
             var frame = document.getElementById('svgedit');
@@ -62,22 +64,26 @@
 			}
             else
 			{
-				alert('Congratulations. Your SVG string is back in the host page, do with it what you will\n\n' + data);
+				console.log(data);
+				//alert('Congratulations. Your SVG string is back in the host page, do with it what you will\n\n' + data);
 			}			
         }
         
         function loadSvg() {
             //var svgexample = '<svg width="640" height="480" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><title>Layer 1</title><rect stroke-width="5" stroke="#000000" fill="#FF0000" id="svg_1" height="35" width="51" y="35" x="32"/><ellipse ry="15" rx="24" stroke-width="5" stroke="#000000" fill="#0000ff" id="svg_2" cy="60" cx="66"/></g></svg>';
 			
-			var svgexample = '<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg"> <g>   <title>Layer 1</title>   <rect fill="#b0cae5" x="22" y="188" width="112" height="65" id="svg_1" stroke="#000000"/>   <rect fill="#b0cae5" stroke="#000000" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="190" y="282" width="100" height="59" id="svg_4"/>   <rect fill="#b0cae5" stroke="#000000" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="164" y="90" width="106" height="61" id="svg_5"/>   <rect fill="#b0cae5" stroke="#000000" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="343" y="160" width="135" height="64" id="svg_6"/>   <line fill="none" stroke="#000000" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="71" y1="199" x2="179" y2="119" id="svg_7"/>   <line fill="none" stroke="#000000" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="269" y1="311" x2="403" y2="200" id="svg_8"/>   <line fill="none" stroke="#000000" stroke-width="null" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x1="249" y1="127" x2="386" y2="180" id="svg_11"/>  </g> </svg>'
+			//var svgexample = '<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">  <g>   <title>Layer 1</title>   <text transform="matrix(11.8182 0 0 1 -1033.14 0)" stroke="#000000" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_1" y="89" x="101" stroke-width="0" fill="#000000"/>   <rect stroke="#000000" id="svg_2" height="61" width="194" y="68" x="38" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#56aaff"/>   <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_3" y="109" x="134" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">Register Vehicle</text>   <rect id="svg_4" stroke="#000000" height="61" width="194" y="158.5" x="122" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#56aaff"/>   <text id="svg_5" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="197.5" x="217" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">Pay Fees</text>   <line id="svg_8" y2="164" x2="191" y1="121" x1="148" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke="#000000" fill="none"/>  </g> </svg>';
+			
+			var svgexample = '<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">  <g>   <title>Layer 1</title>   <text fill="#000000" stroke-width="0" x="101" y="89" id="svg_1" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" stroke="#000000" transform="matrix(11.8182 0 0 1 -1033.14 0)"/>   <rect fill="#56aaff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="38" y="68" width="194" height="61" id="svg_2" stroke="#000000"/>   <text fill="#000000" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="134" y="109" id="svg_3" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve">Register Vehicle</text>   <rect fill="#56aaff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="61" y="184.5" width="194" height="61" stroke="#000000" id="svg_4"/>   <text fill="#000000" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="156" y="223.5" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" id="svg_5">Pay Fees</text>   <rect stroke="#000000" id="svg_6" fill="#56aaff" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="346" y="164.5" width="227.99999" height="61"/>   <text id="svg_7" fill="#000000" stroke="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="459" y="202.5" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve">Get weight Certificate</text>   <rect id="svg_10" height="49" width="202" y="278" x="361" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="#56aaff"/>   <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_11" y="308" x="453" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">Done</text>   <line id="svg_12" y2="184" x2="169" y1="127" x1="151" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="none"/>   <line id="svg_13" y2="192" x2="351" y1="208" x1="251" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="none"/>   <line id="svg_14" y2="279" x2="466" y1="227" x1="463" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="null" stroke="#000000" fill="none"/>  </g> </svg> ';
+			
             svgCanvas.setSvgString(svgexample);
         }
 		
 		function saveSvg() {			
 			svgCanvas.getSvgString()(handleSvgData);
 		}
-    </script>
-
+	</script>
+    
 	
 	<body>
         <!--[if lt IE 7]>
@@ -95,6 +101,8 @@
 			<div class="editing-container cleafix">
 				
 				<iframe src="svg-editor.html" width="100%" height="500px" id="svgedit" onload="init_embed()"></iframe>
+				
+
 				
 			</div>
 			
@@ -152,12 +160,14 @@
 	
 	<script type="text/javascript">
 		
+		
 		var t=setTimeout(function(){
 			
 			loadSvg();
 			
 		},1500);
 		
+			
 	</script>
 	
 	<!--
