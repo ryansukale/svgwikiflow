@@ -40,9 +40,46 @@
 
         <div class="container">
 
-			<div class="">
-				<h1>Edit Diagram</h1>
+			<div class="context-info clearfix">
+				<div class="source-link simple-nav"><a href="#">Main Diagram</a>&nbsp ></div>
+				<div class="simple-nav fork-title" contentEditable="true">&nbsp;New Untitled Diagram</div>
 			</div>
+			
+			
+			<div class="editing-container">
+				
+				
+				
+			</div>
+			
+			
+			
+			<div class="notes-container">
+				<div class="block-title">Notes</div>
+					<div class="notes">
+						<div contentEditable="true" class="note-item">
+							Add some notes for your changes.
+						</div>
+					</div>
+				
+			</div>
+			
+			
+			
+			<div class="actions-container">
+				<div class="row-fluid">
+				
+					<div class="span8">
+						
+					</div>
+					
+					<div class="span4 actions">
+						<div class="btn btn-success pull-right save-changes">Save Changes</div>
+						<div class="btn btn-inverse pull-right cancel-changes">Cancel</div>
+					</div>
+				</div>
+			</div>
+			
 			
             <footer>
                 <p>&copy; Company 2012</p>
@@ -52,6 +89,85 @@
 
     </body>
 	
+	<style type="text/css">
+	
+	
+		.simple-nav{
+		
+			float:left;
+			margin:5px;
+			
+		}
+		
+		.fork-title{
+			background-color:#dadada;
+			border-radius:5px;
+			padding:0px 5px;
+		}
+		
+		.source-link a{
+			color:rgb(12, 110, 187);
+			text-decoration:underline;
+			
+		}
+	
+		.editing-container{
+			width:100%;
+			height:400px;
+			border:1px solid #dadada;
+			border-radius:5px;
+		}
+		
+		.notes-container{
+			width:100%;
+			margin-top:10px;
+			padding:10px 0px;
+			border-top:1px solid #dadada;
+			border-bottom:1px solid #dadada;
+		}
+		.actions-container{
+			width:100%;
+			margin-top:10px;
+		}
+		
+		.actions .btn{
+			margin:0px 10px;
+		}
+		
+		.note-item{
+			border:1px solid #dadada;
+			background-color:#dadada;
+			border-radius:5px;
+			padding:5px;
+		}
+		
+		.block-title{
+			font-weight:bold;
+			font-size:20px;
+			margin:5px;
+		}
+		
+	</style>
+	
+	<script type="text/javascript">
+	
+	$(function(){
+		
+		var diagramData = {};
+		
+		$('.save-changes').on('click',function(event){
+		
+			var $this = $(this);
+			var $target = $(event.target);
+			
+			//Serialize the object
+			$.post("'/diagrams/create", diagramData );
+			
+		});
+		
+	});
+	
+	</script>
 	
 	<script src="js/frameworks/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	<!-- Unminified Scripts for Dev version -->
