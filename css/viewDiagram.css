@@ -1,0 +1,31 @@
+.header-block{
+	background-color:rgb(86, 149, 179);
+	overflow:auto;
+	height:100px;
+}
+
+.search-form {
+	height:auto;
+	margin-right:10px;
+	margin-top:15px;
+}
+.search-form input{
+	height:auto;
+	width:500px;
+}
+
+
+.question{
+	font-weight:bold;
+	font-size:20px;
+	margin:10px 0px;
+	float:left;
+}
+
+.voting-block{
+    float:right;
+}
+
+.main-content-block{
+    
+}
