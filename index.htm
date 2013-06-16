@@ -76,9 +76,9 @@
 		  
 		  <div class="span6">
 			  <form class="search-form navbar-form pull-right">
-					  <input type="text" class="span2" style="width:400px;">
-					  <button type="submit" class="btn">Search</button>
-					</form>
+					<input type="text" class="span2" style="width:400px;">
+					<button type="submit" class="btn">Search</button>
+			</form>
 		  </div>
 		  
 		  <div class="span2">
@@ -104,6 +104,8 @@
         </div>
       </div>
     </div>
+	
+	
     <div class="container">
       <div class="navbar-inner hidden" style="height:1px;"> 
         
@@ -295,6 +297,21 @@
 
 <!--Custom scripts mainly used to trigger libraries --> 
 <script src="js/script.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$('.search-form button').on('click',function(event){
+			var $this = $(this);
+			var $target = $(event.target);
+			
+			event.preventDefault();
+			
+			window.location = "viewDiagram.html";
+		});
+		
+	});
+	
+</script>
 </body>
 
 <!-- Mirrored from themelize.me/demos/appstrap1.2/index.htm by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 16 Jun 2013 11:13:11 GMT -->
